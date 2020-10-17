@@ -11,7 +11,17 @@ namespace IIS_Mover
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// IIS Mover
+        /// CWW
+        /// GCU CST 451/452 capstone
+        /// This project is designed to allow a sequencing of steps to permit moving applications in
+        /// an IIS app pool
+        /// current tasks are:
+        /// API calls
+        /// App Pool start/stop
+        /// File copying
+        /// File compressing
+        /// Forcing a notice/wait notification for tasks outside the scope of IIS Mover
         /// </summary>
         public static List<String> lFunctions = new List<string>();
         public static List<String> lAppPools = new List<string>();

@@ -1,4 +1,6 @@
-﻿using RestSharp;
+﻿// supports API calls
+
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.IO;

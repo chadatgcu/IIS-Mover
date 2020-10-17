@@ -1,4 +1,6 @@
-﻿using System;
+﻿// supports the ability to manipulate app pools
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
