@@ -5,6 +5,13 @@ VisualStudioVersion = 16.0.30404.54
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IIS Mover", "IIS Mover\IIS Mover.csproj", "{B4C907E5-2DEB-40BF-945D-3C469274126B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentation", "documentation", "{BEB74CCF-4BA9-485D-9129-861836693FB3}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Documents\GCU\CST-452\week 3\documentation\IIS Mover Admin Guide.docx = ..\..\..\..\Documents\GCU\CST-452\week 3\documentation\IIS Mover Admin Guide.docx
+		..\..\..\..\Documents\GCU\CST-452\week 3\documentation\IIS Mover Users Guide.docx = ..\..\..\..\Documents\GCU\CST-452\week 3\documentation\IIS Mover Users Guide.docx
+		..\..\..\..\Documents\GCU\CST-452\week 3\documentation\README.txt = ..\..\..\..\Documents\GCU\CST-452\week 3\documentation\README.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

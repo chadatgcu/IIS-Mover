@@ -1,4 +1,9 @@
-﻿// 
+﻿// Chad Weirick
+// GCU & TPS
+// IIS Mover
+// Overall use: allows for copying of files 
+// Methods:  CopyFiles(List<string> lSourceFiles, List<string> lTargetFiles) copies specified files into a specified destination
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +16,7 @@ namespace IIS_Mover
 {
     class FileCopyService
     {
-        public string CopyFiles(List<string> lSourceFiles, List<string> lTargetFiles)
+        public string CopyFiles(List<string> lSourceFiles, List<string> lTargetFiles) // copies specified files into a specified destination
         {
             string sResults = "";
             int iCounter = 0;

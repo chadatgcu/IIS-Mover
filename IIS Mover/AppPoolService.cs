@@ -1,4 +1,10 @@
-﻿// supports the ability to manipulate app pools
+﻿// Chad Weirick
+// GCU & TPS
+// IIS Mover
+// Overall use:  supports the ability to manipulate app pools
+// Methods: FetchAppPools() returns a list of app pools
+// StartAppPool(String sAppPoolName, int iWait) // starts a specified app pool and waits a set amount of time
+// StopAppPool(String sAppPoolName, int iWait) // stops a specified app pool and waits a set amount of time
 
 using System;
 using System.Collections.Generic;
@@ -22,7 +28,7 @@ namespace IIS_Mover
             return lAppPoolNames;
         }
 
-        public void StartAppPool(String sAppPoolName, int iWait)
+        public void StartAppPool(String sAppPoolName, int iWait) // starts a specified app pool and waits a set amount of time
         {
             foreach (var vAppPool in new ServerManager().ApplicationPools)
             {
@@ -33,7 +39,7 @@ namespace IIS_Mover
             }
             Thread.Sleep(iWait * 1000);
         }
-        public void StopAppPool(String sAppPoolName, int iWait)
+        public void StopAppPool(String sAppPoolName, int iWait) // stops a specified app pool and waits a set amount of time
         {
             foreach (var vAppPool in new ServerManager().ApplicationPools)
             {

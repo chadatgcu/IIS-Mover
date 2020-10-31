@@ -1,4 +1,21 @@
-﻿using System;
+﻿/// <summary>
+/// IIS Mover
+/// CWW
+/// GCU CST 451/452 capstone
+/// This project is designed to allow a sequencing of steps to permit moving applications in
+/// an IIS app pool
+/// current tasks are:
+/// API calls
+/// App Pool start/stop
+/// File copying
+/// File compressing
+/// Forcing a notice/wait notification for tasks outside the scope of IIS Mover
+/// </summary>
+/// v1.0 9-29-20
+/// v1.0.1 10-4-20 support for copy/compress moved to one UI for simplicity
+/// v1.0.2 10-5-20 protected user against sorting top task and bottom task up or down respectively (i.e. top item should be able to sort up/bottom should not be able to sort down)
+/// v1.0.3 10-29-20 added documentation and readme
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -10,19 +27,6 @@ namespace IIS_Mover
 {
     static class Program
     {
-        /// <summary>
-        /// IIS Mover
-        /// CWW
-        /// GCU CST 451/452 capstone
-        /// This project is designed to allow a sequencing of steps to permit moving applications in
-        /// an IIS app pool
-        /// current tasks are:
-        /// API calls
-        /// App Pool start/stop
-        /// File copying
-        /// File compressing
-        /// Forcing a notice/wait notification for tasks outside the scope of IIS Mover
-        /// </summary>
         public static List<String> lFunctions = new List<string>();
         public static List<String> lAppPools = new List<string>();
         public static List<String> lAPIMethods = new List<string>();
@@ -47,20 +51,19 @@ namespace IIS_Mover
             Application.Run(new IISMoverMainWindow());            
         }
         
-        static void FillLists()
+        static void FillLists() // populates list with items
         {
             PopulateFunctionsList();
             PopulateAppPoolList();
             PopulateAPICallMethods();
         }
 
-        static void PopulateAppPoolList()
+        static void PopulateAppPoolList() // uses apppool serverice to populate apppools
         {
-
             lAppPools = oAppPoolService.FetchAppPools();
         }
 
-        static void PopulateAPICallMethods()
+        static void PopulateAPICallMethods() // supported api methods list population
         {
             lAPIMethods.Add("Get");
             lAPIMethods.Add("Post");
@@ -68,7 +71,7 @@ namespace IIS_Mover
             lAPIMethods.Add("Update");
         }
 
-        static void PopulateFunctionsList()
+        static void PopulateFunctionsList() // populates list of supported functions
         {
             lFunctions.Add("API Call");
             lFunctions.Add("APP Pool");

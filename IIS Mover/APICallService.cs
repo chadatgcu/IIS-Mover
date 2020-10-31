@@ -1,4 +1,9 @@
-﻿// supports API calls
+﻿// Chad Weirick
+// GCU & TPS
+// IIS Mover
+// Overall use: supports API calls
+// Methods: MakeCall(String sMethod, String sURL) this allows for simple API calls
+
 
 using RestSharp;
 using System;
@@ -14,7 +19,7 @@ namespace IIS_Mover
 {
     class APICallService
     {
-        public string MakeCall(String sMethod, String sURL)
+        public string MakeCall(String sMethod, String sURL) // allows for making simple API calls
         {
             string sResults = "";
             var vClient = new RestClient(sURL);

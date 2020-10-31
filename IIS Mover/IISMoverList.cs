@@ -1,4 +1,10 @@
-﻿// this is the master IISMoverList object
+﻿// Chad Weirick
+// GCU & TPS
+// IIS Mover
+// Overall use: this is the master IISMoverList object
+// Methods: Save() self-descriptive, saves an IISListMoverFunctionList
+// Load() // self-descriptive, loads an IISListMoverFunctionList
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,12 +21,11 @@ namespace IIS_Mover
         public List<IISMoverFunction> lIISMoverFunctions { get; set; }
 
         public IISMoverList New()
-        {
-            // lIISMoverFunctions = new List<IISMoverFunction>();            
+        {            
             return this;
         }
 
-        public String Save()
+        public String Save() // saves an IISListMoverFunctionList
         {
             String sResult = "Successfully completed!";
             Program.oTargetFileDialog.Title = "Save task list";
@@ -49,7 +54,7 @@ namespace IIS_Mover
             return sResult;
         }
 
-        public String Load()
+        public String Load() // saves an IISListMoverFunctionList
         {           
             String sResult = "Successfully loaded.";
             String sLine;
